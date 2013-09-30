@@ -11,5 +11,8 @@
 
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 
+    <bean class="spring.joy.FactoryPostProcessor"/>
+    <bean class="spring.joy.PostProcessor"/>
+
     <util:constant id="someValue" static-field="spring.joy.Bean.CONST"/>
 </beans>
