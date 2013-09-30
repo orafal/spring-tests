@@ -1,0 +1,12 @@
+Jeg har læst og accepterer indholdet i følgende dokumenter:
+#foreach( $doc in $documents )
+ - ${doc.description}
+#end
+
+${subject.firstName} ${subject.lastName}, CPR: ${subject.nationalId}
+
+-----------------------------------------------------------
+TEKNISK DOKUMENTATION:
+#foreach( $doc in $documents )
+${doc.description}: ${doc.externalReference}
+#end
