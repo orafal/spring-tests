@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/util/spring-aop-3.2.xsd">
 
 
     <bean id="myBean" class="spring.joy.Bean" init-method="initFromCtx" destroy-method="destroyFromCtx">
@@ -15,4 +17,5 @@
     <bean class="spring.joy.PostProcessor"/>
 
     <util:constant id="someValue" static-field="spring.joy.Bean.CONST"/>
+
 </beans>
