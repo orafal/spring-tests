@@ -3,9 +3,11 @@
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
-       http://www.springframework.org/schema/aop http://www.springframework.org/schema/util/spring-aop-3.2.xsd">
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/util/spring-aop-3.2.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context-3.2.xsd">
 
 
     <bean id="myBean" class="spring.joy.Bean" init-method="initFromCtx" destroy-method="destroyFromCtx">
@@ -17,5 +19,7 @@
     <bean class="spring.joy.PostProcessor"/>
 
     <util:constant id="someValue" static-field="spring.joy.Bean.CONST"/>
+
+    <context:annotation-config />
 
 </beans>
